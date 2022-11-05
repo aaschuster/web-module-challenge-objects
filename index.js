@@ -246,7 +246,7 @@ function carMaker(odomInit) {
     const car = {
       odom: odomInit,
     drive: function(miles) {
-      newOdom = this.odom + miles;
+      let newOdom = this.odom + miles;
       this.odom = newOdom;
       return newOdom;
     }
