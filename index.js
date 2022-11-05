@@ -240,12 +240,24 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
+const cars = [];
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odomInit) {
+    const car = {
+      odom: odomInit,
+    drive: function(miles) {
+      newOdom = this.odom + miles;
+      this.odom = newOdom;
+      return newOdom;
+    }
+  }
+  return car;
 }
 
+cars.push(carMaker(30));
+cars[0].drive(4);
+
+console.log(cars[0].odom);
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
