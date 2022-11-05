@@ -211,7 +211,7 @@ Use the getLongReviews function below to do the following:
 */
 
 function getLongReviews(array) {
-newArray = [];
+const newArray = [];
 
     for (let i = 0; i < array.length; i++) {
       if(array[i].feedback.split(" ").length>15) {
