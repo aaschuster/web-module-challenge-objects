@@ -114,10 +114,18 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  const newReview = {
+    name: name,
+    rating: rating,
+    feedback: feedback
+  }
+  array.push(newReview);
+  return array;
 }
 
+addReview(reviews, "Phil", 4, "it is actually an incredible place. I can't think of many other places that I would rather spend my time");
+console.log(reviews[reviews.length-1]);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -131,9 +139,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, i) {
+  return (array[i].name + " gave the restaurant a " + array[i].rating + " star review, and their feedback was: " + array[i].feedback);
 }
+
+console.log(getReviewByIndex(reviews,0));
 
   
 
@@ -150,10 +160,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return (array[array.length-1].name + " gave the restaurant a " + array[array.length-1].rating + " star review, and their feedback was: " + array[array.length-1].feedback);
 } 
 
+console.log(getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
